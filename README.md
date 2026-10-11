@@ -4,7 +4,7 @@
 
 **A hand-drawn style whiteboard that runs in your browser — an Excalidraw-compatible clone built with Vite + rough.js.**
 
-[**▶ Try it now (no install)**](https://nazmul87-wq.github.io/orca-draw/) · [One-line install](#-one-line-install) · [Shortcuts](#%EF%B8%8F-keyboard-shortcuts)
+[**▶ Try it now (no install)**](https://nazmulislam-lab.github.io/orca-draw/) · [One-line install](#-one-line-install) · [Shortcuts](#%EF%B8%8F-keyboard-shortcuts)
 
 ![ORCA Draw demo](docs/demo.gif)
 
@@ -24,18 +24,18 @@
 
 ## 🚀 One-line install
 
-**Easiest:** just open **https://nazmul87-wq.github.io/orca-draw/** — nothing to install.
+**Easiest:** just open **https://nazmulislam-lab.github.io/orca-draw/** — nothing to install.
 
 **Run it locally** (Linux / macOS, needs `git` and Node.js 18+):
 
 ```bash
-wget -qO- https://raw.githubusercontent.com/nazmul87-wq/orca-draw/main/install.sh | bash
+wget -qO- https://raw.githubusercontent.com/nazmulislam-lab/orca-draw/main/install.sh | bash
 ```
 
 or with curl:
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/nazmul87-wq/orca-draw/main/install.sh | bash
+curl -fsSL https://raw.githubusercontent.com/nazmulislam-lab/orca-draw/main/install.sh | bash
 ```
 
 The installer:
@@ -62,7 +62,7 @@ rm -rf ~/.local/share/orca-draw ~/.local/bin/orca-draw ~/.local/share/applicatio
 ## 🛠️ Development
 
 ```bash
-git clone https://github.com/nazmul87-wq/orca-draw.git
+git clone https://github.com/nazmulislam-lab/orca-draw.git
 cd orca-draw
 npm install
 npm run dev        # dev server with hot reload

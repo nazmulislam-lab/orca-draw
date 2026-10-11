@@ -1,11 +1,11 @@
 #!/usr/bin/env bash
 # ORCA Draw one-line installer (Linux / macOS)
-#   wget -qO- https://raw.githubusercontent.com/nazmul87-wq/orca-draw/main/install.sh | bash
+#   wget -qO- https://raw.githubusercontent.com/nazmulislam-lab/orca-draw/main/install.sh | bash
 # or
-#   curl -fsSL https://raw.githubusercontent.com/nazmul87-wq/orca-draw/main/install.sh | bash
+#   curl -fsSL https://raw.githubusercontent.com/nazmulislam-lab/orca-draw/main/install.sh | bash
 set -euo pipefail
 
-REPO="https://github.com/nazmul87-wq/orca-draw.git"
+REPO="https://github.com/nazmulislam-lab/orca-draw.git"
 DIR="${ORCA_DIR:-$HOME/.local/share/orca-draw}"
 BIN="$HOME/.local/bin"
 PORT="${ORCA_PORT:-5179}"
