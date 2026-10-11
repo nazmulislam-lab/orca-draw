@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ORCA Draw</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'><path d='M12.5 3.5l4 4L7 17H3v-4z' fill='%236965db'/></svg>" />
+  </head>
+  <body>
+    <canvas id="canvas"></canvas>
+    <textarea id="text-editor" spellcheck="false" wrap="off"></textarea>
+
+    <div id="welcome" hidden>
+      <div class="hint hint-menu"><svg viewBox="0 0 60 80"><path d="M50 70 C 20 70, 12 50, 14 8 M6 20 L14 6 L22 20" /></svg><span>Export, preferences, ...</span></div>
+      <div class="hint hint-tools"><span>Pick a tool &amp;<br />Start drawing!</span><svg viewBox="0 0 60 80"><path d="M6 70 C 40 66, 48 50, 44 10 M36 22 L44 8 L52 22" /></svg></div>
+      <div class="hint hint-help"><span>Shortcuts &amp; help</span><svg viewBox="0 0 60 80"><path d="M4 12 C 40 8, 48 30, 46 70 M38 58 L46 72 L54 58" /></svg></div>
+      <div class="welcome-center">
+        <div class="logo">ORCA&nbsp;Draw</div>
+        <p>Your drawings are saved in your browser's storage.<br />Save your work to a file regularly to avoid losing it.</p>
+        <div class="welcome-items">
+          <button data-cmd="open"><span class="ic" data-icon="folder"></span>Open<kbd>Ctrl+O</kbd></button>
+          <button data-cmd="help"><span class="ic" data-icon="help"></span>Help<kbd>?</kbd></button>
+        </div>
+      </div>
+    </div>
+
+    <button id="menu-btn" class="island icon-btn" title="Menu"><span class="ic" data-icon="menu"></span></button>
+    <div id="menu" class="island" hidden>
+      <button data-cmd="open"><span class="ic" data-icon="folder"></span>Open<kbd>Ctrl+O</kbd></button>
+      <button data-cmd="save"><span class="ic" data-icon="save"></span>Save to file<kbd>Ctrl+S</kbd></button>
+      <button data-cmd="png"><span class="ic" data-icon="image"></span>Export PNG<kbd>Ctrl+Shift+E</kbd></button>
+      <button data-cmd="svg"><span class="ic" data-icon="image"></span>Export SVG</button>
+      <button data-cmd="help"><span class="ic" data-icon="help"></span>Help<kbd>?</kbd></button>
+      <button data-cmd="reset"><span class="ic" data-icon="trash"></span>Reset the canvas</button>
+      <hr />
+      <button data-cmd="theme"><span class="ic" data-icon="moon"></span><span id="theme-label">Dark mode</span><kbd>Alt+Shift+D</kbd></button>
+    </div>
+
+    <div id="toolbar-wrap">
+      <div id="toolbar" class="island"></div>
+      <div id="tool-hint"></div>
+    </div>
+
+    <div id="top-right">
+      <button class="island text-btn primary" data-cmd="png">Export image</button>
+    </div>
+
+    <div id="panel" class="island" hidden></div>
+
+    <div id="bottom-left">
+      <div class="island group">
+        <button class="icon-btn" data-cmd="zoom-out" title="Zoom out (Ctrl+-)"><span class="ic" data-icon="minus"></span></button>
+        <button class="zoom-label" data-cmd="zoom-reset" title="Reset zoom (Ctrl+0)" id="zoom-label">100%</button>
+        <button class="icon-btn" data-cmd="zoom-in" title="Zoom in (Ctrl+=)"><span class="ic" data-icon="plus"></span></button>
+      </div>
+      <div class="island group">
+        <button class="icon-btn" data-cmd="undo" id="undo-btn" title="Undo (Ctrl+Z)"><span class="ic" data-icon="undo"></span></button>
+        <button class="icon-btn" data-cmd="redo" id="redo-btn" title="Redo (Ctrl+Shift+Z)"><span class="ic" data-icon="redo"></span></button>
+      </div>
+    </div>
+
+    <button id="help-btn" class="island icon-btn" data-cmd="help" title="Help (?)"><span class="ic" data-icon="help"></span></button>
+
+    <div id="help-modal" hidden>
+      <div class="modal island">
+        <div class="modal-head"><h2>Keyboard shortcuts</h2><button class="icon-btn" data-cmd="close-help"><span class="ic" data-icon="x"></span></button></div>
+        <div class="modal-body" id="help-body"></div>
+      </div>
+    </div>
+
+    <div id="toast" hidden></div>
+    <input type="file" id="file-input" accept=".excalidraw,.json,application/json" hidden />
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
